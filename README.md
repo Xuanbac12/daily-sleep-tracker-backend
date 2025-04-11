@@ -67,12 +67,14 @@ backend/
 Trong `application.properties`, cấu hình kết nối như sau:
 
 ```properties
+spring.application.name=backend
 spring.datasource.url=jdbc:mysql://localhost:3306/sleep_tracker
 spring.datasource.username=root
 spring.datasource.password=
-
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
 ```
 
 > 💡 Đảm bảo đã tạo database `sleep_tracker` trong MySQL trước khi chạy app.
