@@ -40,7 +40,8 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
+        config.setAllowedOrigins(Arrays.asList("https://xuanbac.vercel.app/")); // ✅ Chỉ định rõ domain deploy
+        // ✅ Chỉ định rõ
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
         config.setAllowCredentials(true); // Quan trọng nếu bạn dùng cookie, hoặc fetch có credentials
